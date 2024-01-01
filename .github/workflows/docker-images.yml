@@ -40,7 +40,7 @@ jobs:
         with:
           context: ./docker/images/n8n
           build-args: |
-            N8N_VERSION=${{ steps.vars.outputs.tag }}
+            N8N_VERSION=${{ vars.N8N_VERSION }}
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           provenance: false
           push: true
